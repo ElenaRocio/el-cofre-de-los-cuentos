@@ -1,7 +1,7 @@
 # ⭐ El cofre de los Cuentos
 
 ## Descripción
-Sitio web de presentación de **El cofre de los Cuentos**, mi canal infantil de YouTube con historias para soñar e imaginar. Fue desarrollado como **pre-entrega del proyecto** del curso FRONT-END. Muestra los cuentos del canal, reseñas de las familias, un video incrustado y un formulario de contacto.
+Sitio web de presentación de **El cofre de los Cuentos**, mi canal infantil el cual comenzo como un proyecto personal de YouTube con historias para soñar e imaginar. Aprovechando la **pre-entrega del proyecto** del curso de FRONT-END cree la pagina que muestra los cuentos del canal, reseñas de las familias (ficticias porque no tiene aun), un video incrustado y un formulario de contacto. 
 
 ## Tecnologías utilizadas
 - **HTML5**: estructura semántica (`header`, `nav`, `main`, `section`, `footer`).
