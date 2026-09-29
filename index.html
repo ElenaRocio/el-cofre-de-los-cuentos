@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="El cofre de los Cuentos: cuentos infantiles que hacen brillar grandes sueños.">
+  <title>El cofre de los Cuentos | Cuentos infantiles</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header id="inicio">
+    <nav>
+      <a href="#inicio" class="logo">⭐ El cofre de los Cuentos</a>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <h1>Cuentos que hacen brillar grandes sueños</h1>
+      <p>Un canal de YouTube con historias mágicas para leer, escuchar e imaginar antes de dormir.</p>
+      <a href="#productos" class="btn">Descubrir los cuentos</a>
+      <img
+        class="banner"
+        src="img/banner.png"
+        alt="Dos niños leyendo un libro bajo un cielo estrellado junto a un cofre mágico lleno de cuentos">
+    </div>
+  </header>
+
+  <main>
+
+    <section id="productos">
+      <h2>✨ Nuestros cuentos</h2>
+      <p class="intro">Abrí el cofre y elegí tu historia favorita.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🐉</div>
+          <h3>El dragón que tenía miedo</h3>
+          <p>Un pequeño dragón descubre que ser valiente es intentarlo aunque asuste.</p>
+          <span class="duracion">🕒 6 min · 3 a 6 años</span>
+          <a href="https://www.youtube.com/@TU_CANAL" class="btn btn-sm" target="_blank" rel="noopener">Ver en YouTube</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🌙</div>
+          <h3>La luna que quería dormir</h3>
+          <p>Un cuento tranquilo para relajarse y soñar. Ideal para la hora de acostarse.</p>
+          <span class="duracion">🕒 5 min · 2 a 5 años</span>
+          <a href="https://www.youtube.com/@TU_CANAL" class="btn btn-sm" target="_blank" rel="noopener">Ver en YouTube</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">⛵</div>
+          <h3>El barco de las estrellas</h3>
+          <p>Una aventura por el cielo nocturno junto a un capitán muy curioso.</p>
+          <span class="duracion">🕒 8 min · 4 a 8 años</span>
+          <a href="https://www.youtube.com/@TU_CANAL" class="btn btn-sm" target="_blank" rel="noopener">Ver en YouTube</a>
+        </article>
+      </div>
+
+      <div class="video">
+        <h3>🎬 Mirá un cuento ahora</h3>
+        <iframe
+          src="https://www.youtube.com/embed/TU_VIDEO_ID"
+          title="Cuento infantil de El cofre de los Cuentos"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section id="resenas">
+      <h2>💛 Lo que dicen las familias</h2>
+      <div class="reviews">
+        <blockquote class="review">
+          <p>"Mi hija pide el cuento de la luna todas las noches. ¡Se duerme feliz!"</p>
+          <footer>— Carolina, mamá de Emma (4 años)</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>"Historias con valores y una voz muy dulce. Las ilustraciones son hermosas."</p>
+          <footer>— Diego, papá de Bruno (5 años)</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>"Lo uso en el aula para la hora del cuento y los chicos quedan encantados."</p>
+          <footer>— Seño Valeria, maestra de jardín</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>"Por fin un canal sin gritos ni apuro, que invita a imaginar."</p>
+          <footer>— Marcela, abuela de Tomás (3 años)</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>📬 Escribinos</h2>
+      <p class="intro">¿Querés sugerir un cuento o hacer una consulta? ¡Te leemos!</p>
+
+      <form action="https://formspree.io/f/TU_ID_AQUI" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contanos qué cuento te gustaría escuchar..." required></textarea>
+
+        <button type="submit" class="btn">Enviar mensaje ✨</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 El cofre de los Cuentos. Todos los derechos reservados.</p>
+    <p>🌙 Cuentos que hacen brillar grandes sueños 🌙</p>
+  </footer>
+
+</body>
+</html>
