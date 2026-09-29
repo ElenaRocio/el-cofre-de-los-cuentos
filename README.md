@@ -1,7 +1,7 @@
 # ⭐ El cofre de los Cuentos
 
 ## Descripción
-Sitio web de presentación de **El cofre de los Cuentos**, mi canal infantil de YouTube con historias para soñar e imaginar. Fue desarrollado como **pre-entrega del proyecto** del curso de diseño web. Muestra los cuentos del canal, reseñas de las familias, un video incrustado y un formulario de contacto.
+Sitio web de presentación de **El cofre de los Cuentos**, mi canal infantil de YouTube con historias para soñar e imaginar. Fue desarrollado como **pre-entrega del proyecto** del curso FRONT-END. Muestra los cuentos del canal, reseñas de las familias, un video incrustado y un formulario de contacto.
 
 ## Tecnologías utilizadas
 - **HTML5**: estructura semántica (`header`, `nav`, `main`, `section`, `footer`).
@@ -18,10 +18,10 @@ Sitio web de presentación de **El cofre de los Cuentos**, mi canal infantil de 
 - Contacto
 
 ## 🔗 Sitio publicado
-👉 [Ver sitio en GitHub Pages](AQUÍ_VA_EL_LINK)
+👉 https://github.com/ElenaRocio/el-cofre-de-los-cuentos
 
 ## 📺 Canal de YouTube
-👉 [El cofre de los Cuentos](https://www.youtube.com/@TU_CANAL)
+👉 https://youtube.com/@elcofredeloscuentos2?si=NVk_mu7925I1XDm7
 
 ## Autor
-Elena Rocio Caceres – Curso de Diseño Web
+Elena Rocio Caceres
