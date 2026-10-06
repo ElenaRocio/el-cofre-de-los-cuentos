@@ -5,7 +5,7 @@ Sitio web de presentación de **El cofre de los Cuentos**, mi canal infantil el 
 
 ## Tecnologías utilizadas
 - **HTML5**: estructura semántica (`header`, `nav`, `main`, `section`, `footer`).
-- **CSS3**: variables, degradados, fuentes de Google Fonts (Fredoka y Nunito).
+- **CSS3**: variables, degradados, fuentes de Google Fonts (Fredoka).
 - **Flexbox**: distribución responsiva de las tarjetas de cuentos.
 - **CSS Grid**: cuadrícula de reseñas.
 - **Media Queries**: diseño adaptable a tablets y móviles.
