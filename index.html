@@ -14,7 +14,7 @@
       <a href="#inicio" class="logo">⭐ El cofre de los Cuentos</a>
       <ul>
         <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#productos">Productos</a></li>
+        <li><a href="#cuentos">Cuentos</a></li>
         <li><a href="#resenas">Reseñas</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
@@ -23,7 +23,7 @@
     <div class="hero">
       <h1>Cuentos que hacen brillar grandes sueños</h1>
       <p>Un canal de YouTube con historias mágicas para leer, escuchar e imaginar antes de dormir.</p>
-      <a href="#productos" class="btn">Descubrir los cuentos</a>
+      <a href="#cuentos" class="btn">Descubrir los cuentos</a>
       <img
         class="banner"
         src="banner.png"
@@ -33,43 +33,40 @@
 
   <main>
 
-    <section id="productos">
+    <section id="cuentos">
       <h2>✨ Nuestros cuentos</h2>
       <p class="intro">Abrí el cofre y elegí tu historia favorita.</p>
 
-      <div class="cards">
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">🐉</div>
-          <h3>La Estrella ✨</h3>
-          <p>Un pequeño dragón descubre que ser valiente es intentarlo aunque asuste.</p>
-          <span class="duracion">🕒 6 min · 3 a 6 años</span>
-          <a href="https://youtu.be/X6XN-DdgYGc" class="btn btn-sm" target="_blank" rel="noopener">Ver en YouTube</a>
-        </article>
+      <!-- Filtro por edad: el JS usa data-min y data-max de cada botón -->
+      <div class="filtros" role="group" aria-label="Filtrar cuentos por edad">
+        <button type="button" class="filtro activo" data-min="0" data-max="99" aria-pressed="true">Todos</button>
+        <button type="button" class="filtro" data-min="2" data-max="4" aria-pressed="false">2 a 4 años</button>
+        <button type="button" class="filtro" data-min="4" data-max="6" aria-pressed="false">4 a 6 años</button>
+        <button type="button" class="filtro" data-min="6" data-max="8" aria-pressed="false">6 a 8 años</button>
+      </div>
 
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">🌙</div>
-          <h3>La luna que quería dormir</h3>
-          <p>Un cuento tranquilo para relajarse y soñar. Ideal para la hora de acostarse.</p>
-          <span class="duracion">🕒 5 min · 2 a 5 años</span>
-          <a href="https://youtube.com/@elcofredeloscuentos2?si=NVk_mu7925I1XDm7" class="btn btn-sm" target="_blank" rel="noopener">Ver en YouTube</a>
-        </article>
-
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">⛵</div>
-          <h3>El barco de las estrellas</h3>
-          <p>Una aventura por el cielo nocturno junto a un capitán muy curioso.</p>
-          <span class="duracion">🕒 8 min · 4 a 8 años</span>
-          <a href="https://youtube.com/@elcofredeloscuentos2?si=NVk_mu7925I1XDm7" class="btn btn-sm" target="_blank" rel="noopener">Ver en YouTube</a>
-        </article>
+      <!-- Las tarjetas se generan con JavaScript a partir de cuentos.json -->
+      <div class="cards" id="lista-cuentos" aria-live="polite">
+        <p class="cargando">Abriendo el cofre...</p>
       </div>
 
       <div class="video">
         <h3>🎬 Mirá un cuento ahora</h3>
-        <a class="video-link" href="https://www.youtube.com/watch?v=X6XN-DdgYGc&t=8s" target="_blank" rel="noopener">
-          <img src="https://img.youtube.com/vi/X6XN-DdgYGc/hqdefault.jpg" alt="Ver el cuento La Estrella en YouTube">
-        </a>
+        <button type="button" class="video-link" data-video="X6XN-DdgYGc" data-titulo="La Estrella">
+          <img src="https://img.youtube.com/vi/X6XN-DdgYGc/hqdefault.jpg" alt="Ver el cuento La Estrella">
+          <span class="play" aria-hidden="true">▶</span>
+        </button>
       </div>
     </section>
+
+    <!-- Ventana emergente para ver los videos sin salir de la página -->
+    <dialog id="modal-video" aria-labelledby="modal-titulo">
+      <div class="modal-cabecera">
+        <h3 id="modal-titulo">Cuento</h3>
+        <button type="button" class="modal-cerrar" aria-label="Cerrar video">✕</button>
+      </div>
+      <div class="modal-video"></div>
+    </dialog>
 
     <section id="resenas">
       <h2>💛 Lo que dicen las familias</h2>
@@ -97,17 +94,22 @@
       <h2>📬 Escribinos</h2>
       <p class="intro">¿Querés sugerir un cuento o hacer una consulta? ¡Te leemos!</p>
 
-      <form action="https://formspree.io/f/xljdzbkr" method="POST">
+      <!-- novalidate: la validación la hace script.js con mensajes propios -->
+      <form id="form-contacto" action="https://formspree.io/f/xljdzbkr" method="POST" novalidate>
         <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required aria-describedby="error-nombre">
+        <small class="error" id="error-nombre"></small>
 
         <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required aria-describedby="error-email">
+        <small class="error" id="error-email"></small>
 
         <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contanos qué cuento te gustaría escuchar..." required></textarea>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contanos qué cuento te gustaría escuchar..." required aria-describedby="error-mensaje"></textarea>
+        <small class="error" id="error-mensaje"></small>
 
         <button type="submit" class="btn">Enviar mensaje ✨</button>
+        <p class="form-estado" id="form-estado" role="status"></p>
       </form>
     </section>
 
@@ -116,7 +118,9 @@
   <footer>
     <p>&copy; 2026 El cofre de los Cuentos. Todos los derechos reservados.</p>
     <p>🌙 Cuentos que hacen brillar grandes sueños 🌙</p>
+    <p><a href="https://youtube.com/@elcofredeloscuentos2" target="_blank" rel="noopener">▶ Visitá el canal en YouTube</a></p>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>

@@ -250,6 +250,132 @@ nav ul a:hover {
   object-fit: cover;
 }
 
+/*Filtros por edad (JS)*/
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.filtro {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  border: 2px solid var(--violeta-claro);
+  background: #fff;
+  color: var(--violeta);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filtro:hover {
+  background: #ece4ff;
+}
+
+.filtro.activo {
+  background: var(--violeta);
+  border-color: var(--violeta);
+  color: var(--dorado);
+}
+
+.cargando {
+  text-align: center;
+  width: 100%;
+  color: var(--violeta-claro);
+  font-weight: 600;
+}
+
+.proximamente {
+  display: inline-block;
+  padding: 0.5rem 1.3rem;
+  border-radius: 30px;
+  background: #ece4ff;
+  color: var(--violeta);
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/*Botón de video destacado*/
+button.video-link {
+  position: relative;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--dorado);
+  color: var(--noche);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 6px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s;
+}
+
+button.video-link:hover .play {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/*Ventana de video (dialog)*/
+#modal-video {
+  width: min(92vw, 900px);
+  margin: auto;
+  border: 4px solid var(--dorado);
+  border-radius: 20px;
+  padding: 0;
+  background: var(--noche);
+  color: #fff;
+  overflow: hidden;
+}
+
+#modal-video::backdrop {
+  background: rgba(20, 16, 58, 0.85);
+}
+
+.modal-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+}
+
+.modal-cabecera h3 {
+  color: var(--dorado);
+  font-size: 1.3rem;
+}
+
+.modal-cerrar {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-video iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
 /*GRID: Reseñas*/
 #resenas {
   max-width: none;
@@ -320,6 +446,36 @@ form .btn {
   align-self: flex-start;
 }
 
+.error {
+  color: #c0392b;
+  font-size: 0.9rem;
+  min-height: 1.1em;
+  margin-top: -0.3rem;
+}
+
+input.invalido,
+textarea.invalido {
+  border-color: #e07a6e;
+}
+
+.form-estado {
+  font-weight: 700;
+}
+
+.form-estado.ok {
+  color: #2e7d4f;
+}
+
+.form-estado.fallo {
+  color: #c0392b;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+  transform: none;
+}
+
 /*Footer*/
 body > footer {
   background-color: var(--noche);
@@ -329,7 +485,12 @@ body > footer {
   font-size: 0.95rem;
 }
 
-body > footer p:last-child {
+body > footer a {
+  color: var(--dorado);
+  font-weight: 700;
+}
+
+body > footer p:nth-child(2) {
   color: var(--dorado);
   margin-top: 0.3rem;
 }

@@ -1,0 +1,29 @@
+[
+  {
+    "titulo": "La Estrella",
+    "descripcion": "Un pequeño dragón descubre que ser valiente es intentarlo aunque asuste.",
+    "icono": "🐉",
+    "minutos": 6,
+    "edadMin": 3,
+    "edadMax": 6,
+    "videoId": "X6XN-DdgYGc"
+  },
+  {
+    "titulo": "La luna que quería dormir",
+    "descripcion": "Un cuento tranquilo para relajarse y soñar. Ideal para la hora de acostarse.",
+    "icono": "🌙",
+    "minutos": 5,
+    "edadMin": 2,
+    "edadMax": 5,
+    "videoId": null
+  },
+  {
+    "titulo": "El barco de las estrellas",
+    "descripcion": "Una aventura por el cielo nocturno junto a un capitán muy curioso.",
+    "icono": "⛵",
+    "minutos": 8,
+    "edadMin": 4,
+    "edadMax": 8,
+    "videoId": null
+  }
+]
